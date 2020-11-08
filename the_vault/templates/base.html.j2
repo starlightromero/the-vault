@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+  <title>The Vault</title>
+</head>
+
+<body class="bg-dark text-light d-flex flex-column justify-content-center align-items-start h-100">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="container">
+        {% for message in messages %}
+          <div class="row">
+            <div class="col">
+              <p>{{ message }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</body>
+
+</html>
