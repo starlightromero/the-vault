@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+{% block content %}
+
+<main class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-light">The Vault</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3 class="text-primary">Impenetrable is an understatement.</h3>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <a href="{{ url_for('users.login') }}">
+        <button type="button" class="btn btn-primary w-50">
+          Login
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <a href="{{ url_for('users.register') }}">
+        <button type="button" class="btn btn-primary w-50">
+          Register
+        </button>
+      </a>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
