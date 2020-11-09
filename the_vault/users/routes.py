@@ -45,7 +45,7 @@ def register():
     return render_template("register.html.j2", form=form)
 
 
-@users.route("/account")
+@users.route("/account", methods=["GET", "POST"])
 @login_required
 def account():
     """Show account page."""

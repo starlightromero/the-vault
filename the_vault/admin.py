@@ -9,7 +9,7 @@ class RestrictedAdminIndexView(AdminIndexView):
 
     def is_accessible(self):
         """Return True is current user is authenticated."""
-        return current_user.is_authenticated
+        return current_user.is_admin
 
     def inaccessible_callback(self, name, **kwargs):
         """Redirect user to login if not authenticated."""
